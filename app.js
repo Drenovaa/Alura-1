@@ -6,7 +6,6 @@ let tentativas = 1;
 function mensagemInicial () {
     exibirTexto("h1", "Jogo do número secreto");
     exibirTexto("p", `Escolha um número entre 1 e ${tamanhoMaximo}`);
-    console.log(numerosGerados);
 }
 mensagemInicial();
 
@@ -30,6 +29,7 @@ function verificaValor(numero) {
     } else {
         exibirTexto("p", "O Número secreto é menor");
     }
+
     tentativas++;
     limparCampo();
     };
@@ -55,8 +55,6 @@ function resetarJogo() {
     mensagemInicial();
     limparCampo();
     desabilitarBotao();
-    console.log(numerosGerados);
-
 };
 
 function limparCampo() {
@@ -78,5 +76,4 @@ function gerarNumeroAleatorio(){
         numerosGerados.push(numeroSorteado);
         return numeroSorteado;
     }
-
 };
